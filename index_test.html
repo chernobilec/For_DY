@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карусель</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- <style>
+        .slide { display: none; }
+        .slide.active { display: block; }
+    </style> -->
+</head>
+<body>
+    <div class="slider">
+        <div class="slide active" style="background-image: url('../../img/slide_background1.png');">
+          <div class="logo">Логотип</div>
+          <div class="title">Новички</div>
+          <h2>Заголовок 1</h2>
+          <p>Описание 1 <button>Подробнее</button></p>
+        </div>
+        <div class="slide" style="background-image: url('../../img/slide_background2.png');">
+          <div class="logo">Логотип</div>
+          <div class="title">Специалисты</div>
+          <h2>Заголовок 2</h2>
+          <p>Описание 2 <button>Подробнее</button></p>
+        </div>
+        <div class="slide" style="background-image: url('../../img/slide_background3.png');">
+          <div class="logo">Логотип</div>
+          <div class="title">Руководители</div>
+          <h2>Заголовок 3</h2>
+          <p>Описание 3 <button>Подробнее</button></p>
+        </div>
+        <button id="prev" class="arrow">←</button>
+        <button id="next" class="arrow">→</button>
+        <div class="progress-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+    <script>
+$(document).ready(function() {
+    let currentIndex = 0;
+    const slides = $('.slide');
+    const totalSlides = slides.length;
+
+    // Создание точек прогресса
+    for (let i = 0; i < totalSlides; i++) {
+        $('.dots').append('<div class="dot"></div>');
+    }
+
+    function showSlide(index) {
+        slides.removeClass('active');
+        slides.eq(index).addClass('active');
+        $('.dot').removeClass('active').eq(index).addClass('active');
+    }
+
+    $('#next').click(function() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    });
+
+    $('#prev').click(function() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    });
+
+    // Обработчик клика для точек
+    $('.dot').click(function() {
+        currentIndex = $(this).index();
+        showSlide(currentIndex);
+    });
+});
+
+    </script>
+</body>
+</html>

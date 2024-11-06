@@ -1,0 +1,154 @@
+$green: #0ED984;
+$blue: #3577F6;
+$purp: #D72DF3;
+$white: #fff;
+
+.slider {
+  display: flex;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 22px;
+  position: relative;
+  max-width: 1920px;
+  max-height: 960px;
+  min-height: 667px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+
+  .slide {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    color: white;
+
+    &.active {
+      display: flex;
+    }
+
+    // Адаптивные стили
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .slide__box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .slide__logo {
+        display: flex;
+        align-items: center;
+        margin: 3.594% 0 10.209% 13.542%;
+
+        .logo__img {
+          width: 30px;
+          height: 30px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+
+      .slide__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        max-width: 1400px;
+        max-height: 369px;
+        margin: 0 13.542% 27% 13.542%;
+
+        .slide__level {
+          margin-bottom: 25px;
+
+          &.green {
+            width: 85px;
+            color: $green;
+          }
+
+          &.blue {
+            width: 131px;
+            color: $blue;
+          }
+
+          &.purp {
+            width: 140px;
+            color: $purp;
+          }
+
+          &.active {
+            &.green {
+              color: $green;
+            }
+
+            &.blue {
+              color: $blue;
+            }
+
+            &.purp {
+              color: $purp;
+            }
+          }
+        }
+
+        .level__text {
+          font-size: 20px;
+          font-weight: 400;
+          margin: 0px;
+          padding-bottom: 8px;
+
+          &.green {
+            border-bottom: solid $green;
+          }
+
+          &.blue {
+            border-bottom: solid $blue;
+          }
+
+          &.purp {
+            border-bottom: solid $purp;
+          }
+        }
+      }
+
+      .slide__title {
+        font-size: 96px;
+        font-weight: 500;
+        margin: 0 0 45px 0;
+      }
+
+      .slide__description {
+        font-size: 20px;
+        font-weight: lighter;
+      }
+
+      .button {
+        width: 210px;
+        height: 60px;
+        color: $white;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: transparent;
+        border: dashed $white;
+      }
+    }
+  }
+
+  .logo__text-color {
+    &.active {
+      &.green {
+        color: $green;
+      }
+
+      &.blue {
+        color: $blue;
+      }
+
+      &.purp {
+        color: $purp;
+      }
+    }
+  }
+}

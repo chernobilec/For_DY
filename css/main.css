@@ -1,0 +1,9 @@
+@import url(./layout/fonts.css);
+@import url(./layout/base.css);
+@import url(./blocks/slider/slider.css);
+@import url(./blocks/slider/arrows.css);
+@import url(./blocks/slider/progressdots.css);
+@import url(./blocks/slider/button.css);
+@import url(./blocks/products/product.css);
+@import url(./blocks/form/form.css);
+@import url(./blocks/footer/footer.css);

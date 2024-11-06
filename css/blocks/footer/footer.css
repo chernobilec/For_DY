@@ -1,0 +1,38 @@
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #1D1A1A;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1920px;
+  width: 100%;
+  height: 65px;
+  margin: auto;
+}
+
+.footer__wrapper {
+  display: flex;
+  max-width: 1600px;
+  width: 100%;
+  margin: 18px 8% 17px 8%;
+}
+
+@media (max-width: 1280px) {
+  .footer__wrapper {
+    justify-content: center;
+  }
+}
+
+.footer__text {
+  font-weight: 100;
+  color: #fff;
+}
+
+.footer__text.green {
+  font-weight: 400;
+  color: #0ED984;
+}

@@ -1,0 +1,57 @@
+.arrow {
+  position: absolute;
+  top: 47%;
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 10;
+}
+
+@media (max-width: 1280px) {
+  .arrow {
+    display: none;
+  }
+}
+
+.arrow_prev {
+  width: 50px;
+  height: 50px;
+  left: 10px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../../img/prev1.png');
+  transition: 0.3s;
+  opacity: 40%;
+}
+
+.arrow_prev:hover {
+  background-image: url('../../../img/prev_active.png');
+  opacity: 1;
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+.arrow_next {
+  width: 50px;
+  height: 50px;
+  right: 10px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../../img/next1.png');
+  transition: 0.3s;
+  opacity: 40%;
+}
+
+.arrow_next:hover {
+  right: 6px;
+  background-image: url('../../../img/next_active.png');
+  opacity: 1;
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+#prev {
+  left: 73px;
+}
+
+#next {
+  right: 73px;
+}

@@ -1,0 +1,65 @@
+.button {
+  width: 210px;
+  height: 60px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: transparent;
+  border: dashed white;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+.button.hover-green:hover {
+  color: #0ED984;
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+.button.hover-blue:hover {
+  color: #3577F6;
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+.button.hover-purp:hover {
+  color: #D72DF3;
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+.button.form {
+  width: 220px;
+  height: 65px;
+  background-color: #138F5B;
+  border: none;
+  margin: 0;
+}
+
+.button.form:hover {
+  background-color: #04643C;
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+@media (max-width: 1600px) {
+  .button.form {
+    width: 344px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .button.form {
+    width: 500px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button.form {
+    width: 344px;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+}

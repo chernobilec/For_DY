@@ -1,0 +1,63 @@
+.progress-dots {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  left: 13.542%;
+  top: 78%;
+  gap: 20px;
+}
+
+@media (max-width: 1280px) {
+  .progress-dots {
+    top: 84%;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .progress-dots {
+    left: 4.46%;
+    top: 89.507%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .progress-dots {
+    left: 4.46%;
+    top: 89.507%;
+  }
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 auto;
+  background-image: url('../../../img/ellipse.png');
+  background-position: center;
+  display: inline-block;
+}
+
+.dot:hover {
+  cursor: url('../../../img/cursor.png'), auto;
+}
+
+.dot.active.green {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  background-image: url('../../../img/logo_study_green.png');
+}
+
+.dot.active.blue {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  background-image: url('../../../img/logo_study_blue.png');
+}
+
+.dot.active.purp {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  background-image: url('../../../img/logo_study_purp.png');
+}
