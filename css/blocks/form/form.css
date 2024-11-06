@@ -174,9 +174,7 @@
   padding: 20px 0 19px 20px;
   font-size: 20px;
   color: #C5C5C5;
-  z-index: 20;
   pointer-events: auto;
-  /* Убедитесь, что инпуты могут реагировать на события */
 }
 
 .field__input:hover {
