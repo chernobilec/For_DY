@@ -10,6 +10,12 @@ $(document).ready(function() {
       $('.dot').removeClass('active');
       $('.dot').eq(index).addClass('active'); // Обновляем точки прогресса
 
+          // Кликабельность точек
+          $('.dot').click(function() {
+            currentIndex=$(this).index();
+            showSlide(currentIndex);
+          });
+
       // Получаем цвет активной точки
       const activeDotColor=$('.dot.active').attr('class').split(' ')[1];
       $('.dot.active').css('background-image', `url('../../img/logo_study_${activeDotColor}.png')`);
@@ -26,11 +32,7 @@ $(document).ready(function() {
       $('.logo__text-color').eq(index).addClass('active');
     }
 
-          // Кликабельность точек
-          $('.dot').click(function() {
-            currentIndex=$(this).index();
-            showSlide(currentIndex);
-          });
+
 
     $('#next').click(function() {
       currentIndex=(currentIndex + 1) % totalSlides;
